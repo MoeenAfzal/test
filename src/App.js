@@ -1,6 +1,6 @@
 // src/App.js
 import React from "react";
-import bgImage from "./Assets/Images/bubbleBig.png";
+
 import HeroSection from "./components/HeroSection";
 import Slider from "./components/slider";
 import CardSlider from "./components/CardSlider";

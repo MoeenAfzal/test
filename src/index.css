@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,body{
+  overflow-x: hidden;
+}
+/* CSS file */
+.bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./Assets/Images/bubbleBig.png'); /* adjust the path if needed */
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1; /* Adjust the opacity if you want */
+  z-index: 1; /* Place behind content */
+  /* animation: spin 100s linear infinite;  */
+}
+/* Keyframes for spinning */
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 10s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 10s linear infinite;
+}
+.icon-gradient {
+ 
+  background: linear-gradient(90deg, #7CC140 0%, #388FCB 100%);   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+
+}
+
+.icon-gradient:hover {
+  transform: scale(1.1); /* Slightly increase the size on hover */
+}
+.bg{
+  background: linear-gradient(180deg, rgba(226, 245, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 321.7%);
+
+}
+@keyframes fadeInDrop {
+  0% {
+    opacity: 0; /* Invisible at the start */
+    transform: translateY(-50px); /* Start above */
+  }
+  20% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* In its normal position */
+  }
+  80% {
+    opacity: 1; /* Still visible */
+    transform: translateY(0); /* Still in its normal position */
+  }
+  100% {
+    opacity: 0; /* Invisible at the end */
+    transform: translateY(50px); /* Move below */
+  }
+}
+
+.animation-container {
+  animation: fadeInDrop 4s infinite; /* Adjust duration as needed */
+}
+
+
+
+/* Continuous horizontal scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%); /* Change based on total images to fit 12 in view */
+  }
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  animation: scroll 50s linear infinite; /* Adjust time to control speed */
+  width: calc(100% * 3); /* Change this based on your image count and size */
+}
+/* styles.css or global CSS file */
+.active-slide .border-blue-500 {
+  border-color: #4CAF50; /* Green border for active slide */
+}

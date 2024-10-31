@@ -76,16 +76,16 @@ export default function HeroSection() {
           {/* Social Icons and People Registered */}
           <div className="flex items-center space-x-4 mt-4">
             <div className="flex space-x-4">
-              <a href="#" className="icon-gradient p-2 rounded-full text-white">
+              <a href="/" className="icon-gradient p-2 rounded-full text-white">
                 <i className="fab fa-facebook-f text-white"></i>
               </a>
-              <a href="#" className="icon-gradient p-2 rounded-full text-white">
+              <a href="/" className="icon-gradient p-2 rounded-full text-white">
                 <i className="fab fa-instagram text-white"></i>
               </a>
-              <a href="#" className="icon-gradient p-2 rounded-full text-white">
+              <a href="/" className="icon-gradient p-2 rounded-full text-white">
                 <i className="fab fa-linkedin-in text-white"></i>
               </a>
-              <a href="#" className="icon-gradient p-2 rounded-full text-white">
+              <a href="/" className="icon-gradient p-2 rounded-full text-white">
                 <i className="fab fa-twitter text-white"></i>
               </a>
             </div>

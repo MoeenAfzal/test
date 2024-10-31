@@ -19,7 +19,7 @@ export default function Slider() {
           <img
             key={index}
             src={image}
-            alt={`Sliding image ${index + 1}`}
+            alt={`Sliding  ${index + 1}`}
             className="inline-block mx-2 w-16 h-20 object-contain p-2" // Adjust size as needed
           />
         ))}

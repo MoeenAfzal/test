@@ -47,7 +47,7 @@ export default function HeroSection() {
             Supply that meets Demand. Get the best wholesale prices of used and
             refurbished Mobile Stocks.
           </p>
-          <a href="#" className="text-blue-600 flex items-center space-x-2">
+          <a href="/" className="text-blue-600 flex items-center space-x-2">
             <span>Learn More</span>
             <span>&rarr;</span>
           </a>

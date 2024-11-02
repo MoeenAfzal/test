@@ -9,12 +9,12 @@ function App() {
   return (
     <div>
       <Contact/>
-      <div className="bg-green   rounded-tl-[50px] rounded-tr-[50px]">
+      <div className=" rounded-tl-[50px] rounded-tr-[50px]">
         <NavBar />
         <HeroSection />
       </div>
 
-      <div className=" -mt-20 md:-mt-[200px] z-50 relative">
+      <div className=" -mt-20 md:-mt-[170px] z-50 relative">
         <Slider />
       </div>
       <CardSlider />

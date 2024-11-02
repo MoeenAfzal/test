@@ -43,22 +43,23 @@ const products = [
 
 export default function CardSlider() {
   return (
-    <div className="w-full max-w-6xl mx-auto mt-10 relative">
+    <div className="w-full max-w-6xl mx-auto mt-10 relative p-4">
       {/* Header Section */}
       <div className="text-center mb-6 relative">
         <div className="absolute inset-0 flex justify-center items-center">
           <img
             src={bubbleImage}
             alt="Bubble Background"
-            className="w-60 h-24 opacity-100 translate-y-[-45%] translate-x-[-40%]" // Move image slightly to the left
+            className="w-40 h-16 translate-y-[-80%] translate-x-[-40%]  md:w-60 md:h-24 opacity-100 md:translate-y-[-45%] md:translate-x-[-40%]" // Move image slightly to the left
           />
         </div>
-        <h2 className="text-6xl font-bold text-white relative z-10 inline-flex items-center">
+        <h2 className=" text-4xl md:text-6xl font-bold text-white relative z-10 inline-flex items-center">
           Mobile
           <span className="ml-2 text-customBlue">Stock</span>
         </h2>
-        <p className="text-lg text-gray-800 font-bold relative z-10 mt-10"> {/* Added mt-4 for spacing */}
-          We stay up to date with the latest technology trends and offer innovative solutions. <br /> 
+        <p className=" text-sm md:text-lg text-gray-800 font-bold relative z-10 mt-10">
+          We stay up to date with the latest technology trends and offer
+          innovative solutions. <br />
           that help you stay ahead in competition
         </p>
       </div>
@@ -66,7 +67,6 @@ export default function CardSlider() {
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={20}
-        slidesPerView={4}
         navigation={{
           nextEl: ".swiper-button-next-custom",
           prevEl: ".swiper-button-prev-custom",
@@ -75,7 +75,6 @@ export default function CardSlider() {
           el: ".swiper-pagination-custom",
           clickable: true,
           renderBullet: (index, className) => {
-            // Limit to a maximum of 4 bullets
             if (index < 4) {
               return `<span class="${className} custom-pagination-bullet"></span>`;
             }
@@ -83,6 +82,20 @@ export default function CardSlider() {
           },
         }}
         loop={true}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.5, // Shows 1.5 cards on small screens
+          },
+          768: {
+            slidesPerView: 2.5, // Shows 2.5 cards on medium screens
+          },
+          1024: {
+            slidesPerView: 3.5, // Shows 3.5 cards on large screens
+          },
+          1280: {
+            slidesPerView: 4, // Shows 4 cards on extra-large screens
+          },
+        }}
       >
         {products.map((product) => (
           <SwiperSlide key={product.id}>
@@ -119,7 +132,7 @@ export default function CardSlider() {
           .custom-pagination-bullet {
             width: 12px;
             height: 12px;
-            background-color:  #BED9F6; /* Tailwind color for bg-blue-200 */
+            background-color: #BED9F6;
             border-radius: 9999px;
             transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
             display: inline-block;
@@ -127,7 +140,7 @@ export default function CardSlider() {
 
           /* Active bullet styling */
           .swiper-pagination-bullet-active.custom-pagination-bullet {
-            background-color: #22c55e; /* Tailwind color for bg-green-500 */
+            background-color: #22c55e;
             width: 40px;
             height: 16px;
           }

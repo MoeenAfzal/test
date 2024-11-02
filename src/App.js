@@ -1,27 +1,23 @@
 // src/App.js
 import React from "react";
-
 import HeroSection from "./components/HeroSection";
 import Slider from "./components/slider";
 import CardSlider from "./components/CardSlider";
+import NavBar from "./components/NavBar";
+import Contact from "./components/Contact";
 function App() {
   return (
     <div>
-      <div
-        className="w-full min-h-[130vh] flex items-center justify-center relative "
-      >
-       
+      <Contact/>
+      <div className="bg-green   rounded-tl-[50px] rounded-tr-[50px]">
+        <NavBar />
         <HeroSection />
-       
       </div>
-      
-      <div className="-mt-28 z-50 relative">
-      <Slider/>
-      
+
+      <div className=" -mt-20 md:-mt-[200px] z-50 relative">
+        <Slider />
       </div>
-      <CardSlider/>
-      
-       
+      <CardSlider />
     </div>
   );
 }

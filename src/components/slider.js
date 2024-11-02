@@ -13,7 +13,7 @@ export default function Slider() {
   const displayImages = Array.from({ length: totalImages }, (_, index) => images[index % images.length]);
 
   return (
-    <div className="slider-container overflow-hidden py-4">
+    <div className="slider-container overflow-hidden pt-32 md:py-4">
       <div className="slider-track flex animate-scroll">
         {displayImages.map((image, index) => (
           <img
